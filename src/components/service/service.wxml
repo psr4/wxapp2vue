@@ -1,0 +1,5 @@
+ 
+     <button open-type="contact" send-message-title  send-message-img	> <image src='/image/img/kf.png'  mode='aspectFit'    style='left:{{_left}}px;top:{{_top}}px' catchtouchmove="move" class="kefu_img {{move?'move':''}}" catchtouchend='touchend' catchtouchcancel='touchend'   > </image>
+     </button>
+     
+ 

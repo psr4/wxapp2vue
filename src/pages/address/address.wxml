@@ -1,0 +1,83 @@
+<!--pages/adderss/address.wxml-->
+<import src="/template/common.wxml" />
+
+<block wx:if="{{additem}}">
+  <form bindsubmit="submit">
+    <view class="from">
+      <input type="text" placeholder="请填写您的真实姓名" value="{{data.consignee}}" name="consignee" />
+      <view class="area">
+        <picker bindchange="bindChange" value="{{select[0]}}" range="{{dsyitem[0]}}" data-index="0">
+          <view class="choose">
+            {{sheng_T}}
+          </view>
+        </picker>
+        <picker bindchange="bindChange" value="{{select[1]}}" range="{{dsyitem['0_'+select[0]]}}" data-index="1">
+          <view class="choose">
+            {{shi_T}}
+          </view>
+        </picker>
+        <picker bindchange="bindChange" value="{{select[2]}}" range="{{dsyitem['0_'+select[0]+'_'+select[1]]}}" data-index="2">
+          <view class="choose">
+            {{qu_T}}
+          </view>
+        </picker>
+      </view>
+      <input type="text" placeholder="不必重复填写地区" value="{{data.address}}" name="address" />
+      <input type="text" placeholder="电话号码" value="{{data.mobile}}" name="mobile" />
+    </view>
+    <button form-type="submit">保存</button>
+    <button bindtap="cancel">取消</button>
+  </form>
+</block>
+<block wx:else="{{additem}}">
+  <view wx:for="{{list}}" class="item {{ defaultid==item.id?'active':'' }}" wx:key="list" data-id="{{item.id}}" data-index="{{index}}" bindtap="default_address">
+    <view class="info">{{item.consignee}}({{item.mobile}})</view>
+    <view class="address">{{item.sheng}} {{item.shi}} {{item.qu}} {{item.address}}</view>
+    <view class="btns">
+      <view class="btn" bindtap="edit" data-id="{{item.id}}" data-index="{{index}}"><i class="iconfont icon-edit"></i>编辑</view>
+      <view class="btn" bindtap="del" data-id="{{item.id}}"><i class="iconfont icon-delete"></i>删除</view>
+    </view>
+  </view>
+  <button bindtap="additem">新增地址</button>
+</block>
+
+
+
+<view class="address_selector" wx:if="{{isShow}}">
+  <view class="main">
+    <view class="btnbar">
+      <view class="cancel" bindtap="address_cancel">
+        <text>取消</text>
+      </view>
+      <view class="confirm" bindtap="address_confirm">
+        <text>确认</text>
+      </view>
+    </view>
+    <view class="content">
+
+      <picker-view style="width:100%;" class="area-selector box box-lr" bindchange="bindChange">
+        <picker-view-column class="selector province flex">
+          <view class="items" wx:for="{{dsyitem[select[0]]}}" data-index="0" wx:key="sheng" data-id="{{index}}">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column wx:if="{{ dsyitem[select[0]+'_'+select[1]].length>0 }}">
+          <view class="items" wx:for="{{dsyitem[select[0]+'_'+select[1]]}}" data-index="1" wx:key="shi" data-id="{{index}}">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column wx:if="{{ qu.length>0 }}">
+          <view class="items" wx:for="{{qu}}" data-index="2" wx:key="qu" data-id="{{index}}">{{item}}</view>
+        </picker-view-column>
+      </picker-view>
+
+
+      <!--scroll-view scroll-y>
+        <view class="items {{index == dsy[0]?'active':''}}" wx:for="{{sheng}}" data-index="0" wx:key="sheng" data-id="{{index}}" bindtap="address_choose">{{item}}</view>
+      </scroll-view>
+      <scroll-view scroll-y wx:if="{{ shi.length>0 }}">
+        <view class="items {{index == dsy[1]?'active':''}}" wx:for="{{shi}}" data-index="1" wx:key="shi" data-id="{{index}}"  bindtap="address_choose">{{item}}</view>
+      </scroll-view>
+      <scroll-view scroll-y wx:if="{{ qu.length>0 }}">
+        <view class="items {{index == dsy[2]?'active':''}}" wx:for="{{qu}}" data-index="2" wx:key="qu" data-id="{{index}}"  bindtap="address_choose">{{item}}</view>
+      </scroll-view-->
+    </view>
+  </view>
+</view>
+<template is="tabbar"></template>

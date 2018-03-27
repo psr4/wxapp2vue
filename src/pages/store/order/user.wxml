@@ -1,0 +1,16 @@
+<table>
+    <thead>
+        <tr>
+            <th>会员</th>
+            <th>余额</th>
+            <th>提现</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr wx:for="{{list}}" wx:key="index" catchtap="showAccount" data-userid="{{item.userid}}">
+            <td>{{item.username}}</td>
+            <td>{{item.money}}</td>
+            <td>{{item.cash}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,435 @@
+/* pages/detail/detail.wxss */
+
+.picture swiper, .picture image {
+    width: 750rpx;
+    height: 500rpx;
+}
+
+.information {
+    padding: 40rpx;
+   
+}
+
+.information .title {
+    font-size: 34rpx;
+    color: #242424;
+    text-align: center;
+    font-weight: 600;
+}
+
+.information .jiage {
+    margin-top: 20rpx;
+    align-items: flex-end;
+    color: #4a4a4a;
+    font-size: 26rpx;
+    text-align: center;
+}
+
+.information .jiage .value {
+    font-size: 36rpx;
+    font-weight: bold;
+    color: #FF9935;
+    margin-right: 40rpx;
+}
+
+.information .jiage .unit {
+    color: #ef2f72;
+}
+
+.kuang {
+    box-sizing: border-box;
+    display: flex;
+    line-height: 1.2;
+    background: #f8f7f7;
+    padding: 10px 40rpx;
+    color: #4a4a4a;
+    font-size: 24rpx;
+    border-bottom: 1rpx solid #f4f4f4;
+}
+
+.kuang .youhuiquan {
+    flex: 0 0 80%;
+}
+.kuang .iconfont{
+    width:16px;
+    margin-right:15rpx;
+
+}
+.icon-return1.active{
+    transform:rotate(90deg);
+}
+.kuang .icon-youhuiquan {
+    color: #ef2f72;
+    margin-right: 15rpx;
+}
+
+.kuang .icon-return1 {
+    transition: .5s;
+    color: #a1a1a1;
+    font-size: 28rpx;
+}
+.jiage image{
+	width:400rpx;
+}
+.information .jiage {
+  color:#FF9935;
+	font-size:14px;
+	line-height: 20px;
+}
+.information .jiage .yuanvalue{
+	color:#000;
+	font-weight: 600;
+}
+.information .jiage .yuanjia .yuanvalue {
+    text-decoration: line-through;
+}
+
+.info {
+    font-size: 0px;
+}
+
+.shuliang {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    /* border-top:1rpx solid #f4f4f4; */
+    border-bottom: 1rpx solid #f4f4f4;
+    padding: 40rpx 0;
+    color: #a1a1a1;
+}
+
+.shuliang .shuxing {
+    flex: 0 0 30%;
+}
+
+.shuliang .line {
+    border-right: 1rpx solid #f4f4f4;
+}
+
+.shuliang .shuxing .zhi {
+    padding: 10rpx 0;
+}
+
+/* 展示店铺优惠券 */
+
+.showcoupon {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    transition: 0.5s;
+}
+
+.active {
+    top: 0;
+}
+
+.showcoupon .touming {
+    height: 24%;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.showcoupon .coupons {
+    height: 76%;
+    background: #f8f7f7;
+    padding: 20rpx 0;
+    position: relative;
+}
+
+.showcoupon .coupons .title {
+    text-align: center;
+}
+
+.showcoupon .coupons .coupon {
+    width: 90%;
+    margin: 30rpx auto;
+    background: #bbb;
+    border-radius: 0 5px 5px 0;
+    display: flex;
+    padding: 20rpx 20rpx;
+    align-items: center;
+}
+
+.showcoupon .coupons .coupon.active {
+    background: #fd5992;
+}
+
+.showcoupon .coupons .coupon  .info {
+    flex: 1;
+    padding-left: 20rpx;
+    color: #fff;
+    position: relative;
+    border-right: dashed 1px #fff;
+}
+
+.showcoupon .coupons .coupon  .info::before {
+    position: absolute;
+    display: block;
+    height: 16px;
+    width: 16px;
+    border-radius: 16px;
+    top: -18px;
+    right: -8px;
+    background: #f8f7f7;
+    content: "";
+}
+
+.showcoupon .coupons .coupon  .info::after {
+    position: absolute;
+    display: block;
+    height: 16px;
+    width: 16px;
+    border-radius: 16px;
+    bottom: -18px;
+    right: -8px;
+    background: #f8f7f7;
+    content: "";
+}
+
+.showcoupon .coupons .coupon  .info .value {
+    line-height: 90rpx;
+    font-size: 54rpx;
+}
+
+.showcoupon .coupons .coupon  .info .value text, .manjian, .time {
+    font-size: 20rpx;
+    line-height: 30rpx;
+}
+
+.showcoupon .coupons .coupon .lingqu {
+    flex: 0 0 25%;
+    text-align: center;
+    color: #fff;
+}
+
+.showcoupon .coupons .complete {
+    position: absolute;
+    width: 100%;
+    height: 120rpx;
+    background: -webkit-linear-gradient(left, #ef582f, #efa02f);
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    text-align: center;
+    font-size: 28rpx;
+    line-height: 80rpx;
+    color: #fff;
+}
+
+/* 购买栏 */
+
+.cartbar {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 100rpx;
+    border-top: 1px solid #f2f2f2;
+    background: #fff;
+}
+
+.cartbar ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.cartbar ul .tubiao {
+    flex: 0 0 25%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+/* 
+.cartbar ul .button {
+    flex: 0 0 30%;
+}
+
+.cartbar ul .button button {
+    width: 100%;
+    height: 100%;
+    font-size: 30rpx;
+    line-height: 100rpx;
+    color: #fff;
+    border-radius: 0;
+    border: none;
+}
+
+.cartbar ul .button .jiaru {
+    background: -webkit-linear-gradient(left, #ef582f, #efa02f);
+}
+
+.cartbar ul .button .buy {
+    background: #ef2f72;
+} */
+
+.cartbar ul li .icon {
+    flex: 0 0 24px;
+}
+
+.cartbar ul li .icon, .cartbar ul li .icon image {
+    width: 24px;
+    height: 24px;
+    margin: 2px auto;
+}
+
+.cartbar ul li .title {
+    font-size: 12px;
+    line-height: 18px;
+    color: #b7b7b7;
+}
+
+.cart-wrapper.active {
+    top: 0px;
+}
+
+.cart-wrapper {
+    position: fixed;
+    bottom: 0px;
+    top: 100%;
+    left: 0px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.cart-wrapper .cart {
+    background: white;
+    bottom: 0px;
+    position: absolute;
+    left: 0px;
+    width: 100%;
+}
+
+.cart-wrapper .cart .goods {
+    position: relative;
+    display: flex;
+    border-bottom: solid 1px #ccc;
+    padding: 4px 0;
+}
+
+.cart-wrapper .cart .goods .img {
+    flex: 0 1 80px;
+}
+
+.cart-wrapper .cart .goods .img image {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: -30px;
+    left: 5px;
+    border: solid 2px #fff;
+    background: white;
+}
+
+.cart-wrapper .cart .goods .info {
+    flex: 1;
+}
+
+.cart-wrapper .cart .goods .info .price  {
+    color: #ef2f72;
+    font-size: 14px;
+}
+.cart-wrapper .cart .goods .info .desc{
+    color: #999;
+    font-size: 14px;
+}
+
+
+.cart-wrapper .cart .num {
+    display: flex;
+    padding: 10px 0;
+}
+
+.cart-wrapper .cart .num .label {
+    flex: 1;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.cart-wrapper .cart .num .control {
+    padding: 8px;
+    display: flex;
+    flex: 1;
+    line-height: 24px;
+}
+
+.cart-wrapper .cart .num .control .input {
+    border-top: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
+    text-align: center;
+    width: 40px;
+    box-sizing: border-box;
+    height: 24px;
+}
+
+/* .cart-wrapper .cart .num .control button {
+    height: 24px;
+    line-height: 24px;
+    padding: 0 8px;
+    width: 32px;
+    margin: 0;
+    border-radius: 0px;
+    border: solid 1px #ccc;
+    box-sizing: border-box;
+} */
+
+/* .cart-wrapper .cart .num .control button::after {
+    display: none;
+} */
+
+/* .cart-wrapper .cart .btn button::after {
+    display: none;
+} */
+
+/* .cart-wrapper .cart .btn button {
+    border-radius: 0px;
+    background: #ef2f72;
+    height: 42px;
+    line-height: 42px;
+    font-size: 12px;
+    color: white;
+} */
+.sall{
+  overflow: auto;
+}
+.sall image{
+  margin: 0;
+  height:90%;
+   padding-top:7%;
+
+}
+
+
+.btn_contact{
+  background: transparent;
+  border:0px solid transparent;
+  position:static;
+  padding: 0;
+
+}
+.tubiao button{
+  padding-top: 0;
+  overflow: auto;
+  background: transparent;
+  font-size: 40rpx;
+}
+.tubiao button .icon{
+  padding-top: 0;
+}
+.tubiao button image{
+  margin-top: 0;
+  padding-top: 0;
+}
+.tubiao button::after{
+  display: none;
+}
+.tubiao .title{
+  line-height: 40rpx;
+}
+
+ 

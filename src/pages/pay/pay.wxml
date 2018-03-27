@@ -1,0 +1,55 @@
+<!--pages/pay/pay.wxml-->
+<import src="/template/common.wxml"/>
+
+<view class="box">
+    <view class="title">联系人地址</view>
+    <view wx:if="{{address}}" class="address" data-id="{{address.id}}">
+      <view class="info">{{address.consignee}} ( {{address.mobile}} )</view>
+      <view class="addr">{{address.sheng}} {{address.shi}} {{address.qu}} {{address.address}}</view>
+    </view>
+    <navigator class="choose" url="/pages/address/address?method=chooseaddress">选择地址</navigator>
+</view>
+
+
+<!--view class="box">
+  <block wx:if="{{yunfei.freesum == 0}}">
+  <view class="title1">卖家承担运费</view>
+  </block>
+  <block wx:elif="{{yunfei.freesum > 0}}">
+<view class="title1">选择配送方式:</view>
+ <picker-view class="select" indicator-style="height: 30px;" value="{{value}}" bindchange="bindChange1">
+    <picker-view-column>
+      <view class="items">平邮</view>
+      <view class="items">快递</view>
+      <view class="items">EMS</view>
+    </picker-view-column>
+  </picker-view>  
+  </block>
+</view-->
+
+<view class="box">
+  <view class="title1">给卖家的留言:</view>
+   <textarea placeholder="选填，可以告诉卖家您对商品的特殊需求，如颜色、尺码等" bindinput="textInput"/>
+</view>
+
+<view class="box">
+    <navigator url="/pages/coupon/coupon?method=choose">
+        <view class="title1">
+            <text> 使用优惠券:      {{discount?discount.name:"选择优惠券"}}</text>   
+        </view>
+    </navigator>
+</view>
+
+<view class="box text-right">
+<!--view class="tip">满199减50、满399减100（点击“下单完成支付”自动满减）</view-->
+  <view class="title1">合计:¥{{totalmoney}} + 运费:¥{{yunfei}} - 优惠¥{{yh}}</view>
+  <view class="title1">=¥{{totalmoney - yh + yunfei}}元</view>
+</view>
+
+<view class="box">
+  <button bindtap="gopay">下单完成支付</button>
+</view>
+ <template is="contact" data='{{contaction}}'></template> 
+
+<view style="height:120rpx;"></view>
+<template is="tabbar"></template>

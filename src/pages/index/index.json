@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "service": "/components/service/service",
+	"url": "/components/navigator/url"
+  }
+}

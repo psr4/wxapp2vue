@@ -1,0 +1,91 @@
+/* pages/info/info.wxss */
+
+.tab{
+  background: white;
+  display: flex;
+  box-shadow: 0 0 4px #ddd;
+}
+.tab .item{
+  flex:1;
+  text-align: center;
+  line-height: 40px;
+  border-left:solid 1px #ddd;
+}
+.tab .active{
+  color:#FF9935;
+}
+.tab .item.clearbor{
+  border: none;
+}
+.box{
+  margin: 10px 0;
+  background: white;
+}
+.tips{
+  text-align: center;
+  padding: 20px 0;
+}
+.box .item{
+  display: flex;
+  border-bottom:solid 1px #ddd;
+  padding:10px;
+  font-size: 12px;
+  color:#666;
+}
+.box .item .left{
+  flex:1;
+}
+.box .item .right{
+  flex: 0 0 20%;
+  text-align:right;
+}
+.box .item .right .money{
+  color:red;
+  font-size:14px;
+  font-weight: 600;
+}
+input,.body-view{
+  padding:4px 10px;
+  font-size: 14px;
+  background: white;
+  margin:10px 0;
+  border:solid 1px #ccc;
+  border-radius:3px;
+}
+/* button{
+  height: 35px;
+  line-height: 35px;
+  background: #FF9935;
+  color:#fff;
+  border-radius: 3px;
+  margin:10px 0;
+} */
+.btngroup{
+  height: 20px;
+}
+.tip{
+  font-size:14px;
+  color:#666;
+}
+.account-wrapper{
+  padding: 40px 20px;
+
+}
+
+.box .list {
+  display: flex;
+  line-height: 35px;
+  font-size: 14px;
+}
+.box .list .title{
+  flex:0 0 30%;
+  text-align: center;
+}
+.box .list .content{
+  flex:1;
+}
+
+.box .list .content image{
+  height: 40px;
+  width: 40px;
+}

@@ -1,0 +1,170 @@
+.banner{
+  position: relative;
+}
+.banner image, .banner swiper {
+  width: 100%;
+  height: 515rpx;
+  z-index: 1;
+}
+.banner swiper image{
+	width: 750rpx
+}
+.bi_li .no{
+  height: 66px;
+  line-height: 66px;
+  font-size: 30rpx;
+}
+.xiaoxi {
+  top: 10px;
+  left: 15px;
+  z-index: 100;
+  position: absolute;
+}
+.xiaoxi image{
+  width: 48rpx;
+  height:47rpx;
+}
+.xiaoxi .num{
+ position: absolute;
+ top: -10rpx;
+ right: -20rpx;
+ display: block;
+ width: 36rpx;
+ height:36rpx;
+ text-align: center;
+ line-height: 36rpx;
+ border-radius: 18rpx;
+ background: red;
+ color: #fff;
+ font-size: 11px;
+}
+swiper.swiGS{
+  height: 60px;
+}
+.stockBox{
+  display: flex;
+  padding: 10px 0;
+  font-size: 14px;
+}
+.news image{
+  width: 146rpx;
+  height: 34rpx;
+}
+.stockBox .sto_item{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.stockBox .sto_item image{
+  width: 40px;
+  height:40px;
+}
+.sto_day{
+  margin: 0 28rpx;
+  vertical-align: top;
+}
+.sto_bi{
+  color: #58A5EA;
+  font-size: 15px;
+  line-height: 20px;
+}
+.sto_bi .per{
+  font-size: 12px;
+}
+.stockBox .newsList{
+  color: #333;
+  padding:0 10px;
+  flex: 1;
+  overflow: hidden;
+  font-size: 12px;
+}
+.news{
+  padding: 10px;
+}
+.news .news_content{
+  line-height: 24px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.stockBox .news_li text{
+  margin-right: 10px;
+  color: #999;
+}
+.areaList{
+  display: flex;
+  flex-wrap: nowrap;
+  height: 52px;
+  align-items: center;
+}
+.areaList .li{
+  padding: 7px 18px;
+  text-align: center;
+  flex: 1 0 15%;
+  margin: 0 10px;
+  background: red;
+  color: #fff;
+  border-radius: 4px;
+}
+.areaList .li:nth-of-type(1){
+   background: -webkit-linear-gradient(right, #FF999D , #F4B390); /* Safari 5.1 - 6.0 */
+  background: linear-gradient(to right, #FF999D , #F4B390); /* 标准的语法 */
+}
+.areaList .li:nth-child(2){
+   background: -webkit-linear-gradient(right, #F193C8 , #E4ABE4); /* Safari 5.1 - 6.0 */
+  background: linear-gradient(to right, #F193C8 , #E4ABE4); /* 标准的语法 */
+}
+.areaList .li:nth-child(3){
+  background: -webkit-linear-gradient(right, #58A5EA , #92D8E4); /* Safari 5.1 - 6.0 */
+  background: linear-gradient(to right, #58A5EA , #92D8E4); /* 标准的语法 */
+}
+.areaList .li:nth-child(4){
+   background: -webkit-linear-gradient(right, #FCD69D , #FCB9A0); /* Safari 5.1 - 6.0 */
+  background: linear-gradient(to right, #FCD69D , #FCB9A0); /* 标准的语法 */
+}
+.areaList .li:nth-child(5){
+   background: -webkit-linear-gradient(right, #95D889 , #F0D89B); /* Safari 5.1 - 6.0 */
+  background: linear-gradient(to right, #95D889 , #F0D89B); /* 标准的语法 */
+}
+
+/* 我的天羽币 */
+.tyBi:last-of-type{
+  padding-bottom:30rpx;
+}
+
+.more .iconfont{
+  font-size: 14px;
+}
+.bi_list{
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0 10px;
+}
+.bi_list .bi_li{
+  flex:0 0 60px;
+  text-align: center;
+  margin-right: 12px;
+}
+.bi_list .bi_li image{
+  width: 50px;
+  height: 50px;
+}
+.bi_li image{
+  position: relative;
+}
+.bi_li .num{
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -20rpx;
+  margin-top: -20rpx;
+  line-height: 40rpx;
+  width: 40rpx;
+  height: 40rpx;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 25rpx;
+
+}

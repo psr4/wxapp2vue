@@ -1,0 +1,25 @@
+<!--pages/recommend/recommend.wxml-->
+<import src="/template/common.wxml" />
+
+<view class="goodsitem">
+  <view class="title">
+    <i class="iconfont icon-renqituijian"></i> 人气推荐
+  </view>
+  <ul class="items">
+    <li class="item" bindtap="iteminfo" >
+        <view class="pic">
+          <image src="http://kod.qztywl.com/temp/LH004.png"></image>
+        </view>
+        <view class="desc">
+          <view class="name">兰花水感透白水分乳液</view>
+          <view class="price">¥109</view>
+          <view class="amount">88人付款</view>
+        </view>
+        <view class="class">护肤</view>
+    </li>
+  </ul>
+</view>
+
+ <template is="contact" data='{{contaction}}'></template> 
+
+<template is="tabbar"></template>

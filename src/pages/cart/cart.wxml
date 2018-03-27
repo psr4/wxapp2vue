@@ -1,0 +1,47 @@
+<view class="cart">
+  <view class="title">购物车({{cart.length}})</view>
+</view>
+<view class="products">
+  <view class="product" wx:for="{{cart}}" wx:key="*this">
+    <view class="kong" catchtap="check" data-id="{{item.id}}">
+      <image src="/image/img/{{check[item.id]?'tick':'quan'}}.png"></image>
+    </view>
+    <view class="proimg">
+      <image src="{{item.pic}}"></image>
+    </view>
+    <view class="content">
+      <view class="protitle">{{item.title}}</view>
+      <view class="price">￥{{item.price}}</view>
+    </view>
+    <view class="shuliang">
+      <i class="iconfont icon-jian"  data-id="{{index}}" data-method="sub" bindtap="btns_click"></i>
+      <view class="amount">{{item.num}}</view>
+      <i class="iconfont icon-jia" data-id="{{index}}" data-method="add" bindtap="btns_click"></i>
+    </view>
+  </view>
+</view>
+<view class="totalbar">
+  <view class="tick" >
+    <image src="/image/img/{{checkall?'tick':'quan'}}.png" catchtap="check" data-id="all"></image>
+    <view class="all" catchtap="check" data-id="all">全选</view>
+    <view class="delete" catchtap="del" >删除</view>
+  </view>
+  <view class="total">
+    <view class="heji">合计：</view>
+    <view class="value">{{money}}</view>
+    <view class="totalbtn">
+      <button class="btn" catchtap="gopay">结算</button></view>
+  </view>
+</view>
+
+
+
+
+
+<button open-type="contact" class="kfbtn">
+<text>联
+系
+客
+服
+</text>
+</button>

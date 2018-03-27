@@ -1,0 +1,518 @@
+/* .info {
+    position: relative;
+}
+
+.info .bg {
+    left: 0;
+    width: 100%;
+    position: absolute;
+}
+
+.info, .info .bg image {
+    height: 300rpx;
+    width: 100%;
+}
+
+.info .user {
+    text-align: center;
+    z-index: 9;
+    position: relative;
+    top: 10%;
+}
+
+.info .user image {
+    width: 180rpx;
+    height: 180rpx;
+    border-radius: 98rpx;
+    border: 8rpx solid rgba(255, 255, 255, 0.3);
+}
+
+.info .user .usename {
+    color: #fff;
+}
+
+.box {
+    display: flex;
+    height: 80rpx;
+    line-height: 80rpx;
+    justify-content: center;
+    padding: 20rpx 0;
+    box-shadow:  0 5rpx 10rpx #efefef;
+    margin-bottom: 5rpx;
+}
+
+.box .list {
+    flex: 0 0 50%;
+}
+
+.box .line {
+    border-right: 1rpx solid #f0f0f0;
+}
+
+.box .list .zhi {
+    color: #bbb;
+    font-size: 28rpx;
+}
+
+
+
+.btngroup ul {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background: #fff;
+    padding: 20rpx 0;
+}
+
+.btngroup ul .iconfont {
+    font-size: 40rpx;
+}
+
+.btngroup ul li .name {
+    margin-top: 8rpx;
+}
+
+.box1 {
+    background: #FCFAF7;
+    margin: 20rpx 0 0 ;
+}
+
+/* .box1 .btnlist {
+    border-top: 10rpx solid #FCFAF7;
+    border-bottom: 20rpx solid #FCFAF7;
+} */
+
+/* .box1 .btnlist .list {
+    line-height: 80rpx;
+    border-bottom: 1rpx solid #f0f0f0;
+    padding: 0 30rpx;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+}
+
+.box .btnlist .list:last-child {
+    border-bottom: 0px;
+}
+
+.box1 .icon-return1 {
+    font-size: 26rpx;
+    color: #bbb;
+} */ 
+.user-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow:hidden;
+}
+.user-wrapper .bg{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: -1;
+}
+.user-wrapper .orange{
+    position:absolute;
+    left: 0px;
+    top: 0px; 
+    width: 750rpx;
+    height: 750rpx;
+    background: #FF9935;
+    opacity: .5;
+}
+.user-wrapper .bg image{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    filter: blur(15px);
+    animation: move 5s linear infinite alternate;
+}
+
+@keyframes move{
+    from{
+        top : 0rpx;
+    }
+    to {
+        top: -180rpx;
+    }
+}
+
+.user-wrapper .headimgurl {
+    text-align: center;
+}
+
+.user-wrapper .headimgurl image {
+    width: 65px;
+    height: 65px;
+    border-radius: 60px;
+    margin: 61rpx 0 19rpx 0;
+    border: 5rpx solid rgba(255, 255, 255, 0.5);
+}
+
+.user-wrapper .info {
+    flex: 1;
+    /* margin: 20px 10px; */
+    color: #fff;
+    text-align: center;
+    line-height:24px;
+    padding:13rpx 0 69rpx 0;
+
+}
+
+.user-wrapper .info .nickname {
+    line-height: 20px;
+    font-size: 34rpx;
+    
+}
+
+.user-wrapper .info .userid {
+    font-size: 12px;
+    line-height: 20px;
+}
+.user-wrapper .info .address{
+  font-size: 12px;
+  line-height: 24px;
+  padding:13rpx 0 69rpx 0;
+  color: #eeeeee;
+}
+.user-wrapper .info .address image{
+  width: 18rpx;
+  height: 24rpx;
+  padding-right: 5rpx;
+}
+.infotap{
+  display: flex;
+  position: absolute;
+  top: -150rpx;
+  left: 4%;
+  width: 92%;
+  font-size: 34rpx;
+
+  background: #fff;
+  height: 62px;
+  align-items: center;
+  border-radius: 31px;
+  z-index: 100;
+}
+.infotap .item{
+  flex: 1;
+  text-align: center;
+ 
+}
+.infotap .item .money{
+  color: #1891F9;
+}
+.infotap .item image{
+  width:55rpx;
+  height:33rpx;
+  margin-bottom:-6rpx;
+  padding: 2rpx 0;
+
+}
+.infotap .item .name{
+  color: #626262;
+  font-size: 12px;
+
+}
+.infotap .item:first-child{
+  background: #FF9935;
+  color: #fff;
+  border-radius: 31px;
+  font-family: 'MicrosoftYaHei';
+   line-height: 62px;
+  font-size: 12px;
+}
+
+.user-wrapper .iconfont {
+    position: absolute;
+    left: 29rpx;
+    top: 41rpx;
+    color: #fff;
+}
+.wrapper{
+  position: relative;
+  margin-top: 80rpx;
+}
+ 
+.tit{
+  margin: 0 15px;
+  border-bottom: 1rpx solid #efefef;
+  font-size: 26rpx;
+  color: #616161;
+  line-height:86rpx;
+  position: relative;
+}
+.tit .icon-goto{
+  font-size: 12px;
+  color: #999;
+  padding-top: 8rpx;
+ 
+}
+
+.tit image{
+  height: 36rpx;
+  width: 36rpx;
+  vertical-align:middle;
+  padding-bottom: 5rpx;
+}
+.tit .image2{
+  height: 33rpx;
+  width: 33rpx;
+}
+.btns-wrapper {
+    display: flex;
+    margin: 35rpx 0;
+    
+}
+
+.btns-wrapper .btn {
+    flex: 1;
+    text-align: center;
+    font-size: 12px;
+    color: #616161;
+    line-height: 20px;
+    position: relative;
+}
+
+.btn .iconfont {
+    font-size: 40rpx;
+}
+
+.msg {
+    position: absolute;
+    right: 22px;
+    top: 12px;
+    z-index: 1000;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    border-radius: 15px;
+    background: #d60f1c;
+    color: #fff;
+    font-size: 10px;
+}
+
+.btns-wrapper .btn .border {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 50px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-left: solid 1px #f0f0f0;
+}
+
+.btns-wrapper .btn image {
+    width: 24px;
+    height: 24px;
+}
+
+.btn-ul {
+    display: flex;
+    margin: 4px 0;
+    flex-wrap: wrap;
+    padding: 0 0.5%;
+    text-align: center;
+
+}
+
+.btn-ul .btn-li {
+    flex:0 0 33%; 
+    /* padding: 50rpx 0; */
+     display: flex; 
+     flex-direction: column;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    border-right: 1rpx solid #efefef;
+    border-bottom: 1rpx solid #efefef;
+}
+.btn-ul .btn-li:nth-child(3n){
+  border-right: none;
+}
+.btn-ul .btn-li:nth-child(4),.btn-ul .btn-li:nth-child(5),.btn-ul .btn-li:nth-child(6){
+  border-bottom: none;
+}
+
+
+.btn-ul .btn-li image{
+  width: 45rpx;
+  height: 45rpx;
+}
+.btn-ul .btn-li .tip {
+    position: absolute;
+    left: 35px;
+    top: 5px;
+    background: #ed242e;
+    line-height: 1.8;
+    padding: 0 6px;
+    border-radius: 30px;
+    font-size: 10px;
+    color: white;
+}
+
+
+.btn-ul .btn-li .title {
+    color: #616161;
+    
+    font-size: 12px;
+}
+.btn-ul .btn-li .title .tip text{
+	color:#ED242E;
+}
+/* .btn-ul .btn-li .title:before {
+    content: "\e6be";
+    position: absolute;
+    display: block;
+    right: 10px;
+    top: 0px;
+    height: 38px;
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    color: #ccc;
+} */
+
+.btn-ul .btn-li:last-child .title {
+    border-bottom: solid 0px;
+}
+
+.user-wrapper .icon-qr-code:before {
+    color: #fff;
+}
+.member{
+  position: absolute;
+  top: 141rpx;
+  right: 0;
+  height: 55rpx;
+  font-size: 26rpx;
+  line-height: 55rpx;
+  color: #fff;
+  border-top-left-radius: 28rpx;
+  border-bottom-left-radius: 28rpx;
+  background: rgba(0, 0, 0, 0.16);
+  padding: 0 29rpx 0 35rpx;
+}
+.member image{
+  width: 16px;
+  height: 13px;
+  padding-right: 6rpx;
+}
+.login-wrapper {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    background: #543333;
+}
+
+.login-wrapper:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    z-index: -10;
+}
+
+.loginBtn{
+  position: fixed;
+  width: 100%;
+ 
+  bottom: 90px;
+}
+.login-wrapper button {
+    width: 55%;
+    border-radius: 375rpx;
+    border: 1rpx solid #fff;
+    color: white;
+    background-color:rgba(0,0,0,0);
+    font-size: 16px;
+    line-height: 74rpx;
+
+}
+
+.login-wrapper .content .title text {
+    color: #c30d23;
+}
+
+.login-wrapper .logo {
+    width: 32px;
+    height: 32px;
+}
+
+.contact {
+    background: #c30d23;
+    color: white;
+    text-align: center;
+    height: 42px;
+    line-height: 42px;
+    width: 90%;
+    margin: 20px auto 30px;
+    border-radius: 10rpx;
+}
+
+.form {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100000;
+    overflow: hidden;
+}
+
+.form .content {
+    position: absolute;
+    background: white;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.form .title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 42px;
+    text-align: center;
+    color: #d60f1c;
+}
+
+.form button {
+    width: 80%;
+    line-height: 35px;
+    font-size: 14px;
+    margin: 30rpx auto;
+    color: #fff;
+}
+
+.yijian {
+    background: #ff5050;
+}
+
+.online {
+    background: #0dbb30;
+}
+
+.cancel {
+    background: #ffc900;
+}
+
+.btn-li .navigator{
+  height: 100%;
+  padding:50rpx 0;
+}
+/* .tit{
+  padding-top: 25rpx;
+} */
+
+.blue{
+  color: #3FA3FA;
+}

@@ -1,0 +1,47 @@
+
+@color: #FF9935;
+table {
+    display: table;
+    width: 750rpx;
+    tr {
+        display: table-row;
+        th {
+            display: table-cell;
+        }
+        td {
+            font-size: 10px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+    thead {
+        display: table-header-group;
+        text-align: center;
+        background: #FF9935;
+        color: white;
+        font-size: 12px;
+        line-height: 32px;
+    }
+    tbody {
+        display: table-row-group;
+        text-align: center;
+        td {
+            height: 32px;
+            line-height: 32px;
+        }
+        tr:nth-child(odd) {
+            background: rgba(125, 125, 125, 0.1)
+        }
+        tr:nth-child(even) {
+            background: transparent
+        }
+    }
+}
+button {
+    display: block;
+    width: 60px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    font-size: 10px;
+}

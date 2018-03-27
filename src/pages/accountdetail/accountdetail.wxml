@@ -1,0 +1,45 @@
+<import src="/template/common.wxml" />
+
+<scroll-view scroll-y wx:if="{{list.length>0}}"  class="scorebox"  bindscrolltolower="loadDetail" data-method="acc">
+<view class="box">
+  <view class="item" wx:for="{{list}}" wx:key="list">
+    <view class="left">
+      <view>{{item.info}}</view>
+      <view>{{item.addtime}}</view>
+    </view>
+    <view class="right">
+      <view class="money">{{item.jiner}}</view>
+      <view>{{item.type}}</view>
+    </view>
+  </view>
+</view>
+</scroll-view>
+<view class="box tips" wx:if="{{list.length<=0}}">
+   没有任何记录
+</view>
+
+<!--scroll-view scroll-y class="scorebox" wx:if="{{status == 3 && score.length>0}}" bindscrolltolower="loadDetail" data-method="score">
+<view class="box">
+  <view class="item" wx:for="{{score}}" wx:key="score">
+    <view class="left">
+      <view>{{item.action}}</view>
+      <view>{{item.addtime}}</view>
+    </view>
+    <view class="right">
+      <view class="money">{{item.score}}</view>
+      <view>{{item.status}}</view>
+    </view>
+  </view>
+</view>
+</scroll-view>
+<view class="box tips" wx:elif="{{status == 3}}">
+   没有任何记录
+</view-->
+
+
+
+
+<!-- <template is="contact" data='{{contaction}}'></template>  -->
+<service/>
+<view style="height:120rpx;"></view>
+<template is="tabbar"></template>

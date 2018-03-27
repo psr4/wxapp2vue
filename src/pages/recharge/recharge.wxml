@@ -1,0 +1,18 @@
+<import src="/template/common.wxml" />
+
+
+
+
+<view class="account-wrapper">
+  <form bindsubmit="cz">
+    <view class="tip">充值金额:</view>
+    <input type="text" placeholder="充值金额" name="money" />
+    <view class="btngroup">
+      <button form-type="submit">提交充值</button>
+    </view>
+  </form>
+</view>
+
+ <template is="contact" data='{{contaction}}'></template> 
+
+<template is="tabbar"></template>

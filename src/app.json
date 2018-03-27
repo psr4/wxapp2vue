@@ -1,0 +1,91 @@
+{
+    "pages": [
+        "pages/article/list",
+        "pages/article/article",
+        "pages/index/index",
+        "pages/recommend/recommend",
+        "pages/brand/brand",
+        "pages/list/list",
+        "pages/detail/detail",
+        "pages/class/class",
+        "pages/cart/cart",
+        "pages/pay/pay",
+        "pages/dopay/dopay",
+        "pages/my/my",
+        "pages/info/info",
+        "pages/coupon/coupon",
+        "pages/address/address",
+        "pages/account/account",
+        "pages/accountdetail/accountdetail",
+        "pages/recharge/recharge",
+        "pages/withdraw/withdraw",
+        "pages/order/order",
+        "pages/orderinfo/orderinfo",
+        "pages/group/group",
+        "pages/grouplist/grouplist",
+        "pages/detaillist/detaillist",
+        "pages/qrcode/qrcode",
+        "pages/coupon/get",
+        "pages/site/site",
+        "pages/site/order",
+        "pages/stock/stock",
+        "pages/stock/quotes",
+        "pages/stock/rank",
+        "pages/stock/mining",
+        "pages/stock/control",
+        "pages/stock/bi",
+        "pages/my/account",
+        "pages/stock/record",
+        "pages/store/setting/setting",
+        "pages/store/profit/profit",
+        "pages/store/cash/cash",
+        "pages/store/scan/scan",
+        "pages/customer/cash/cash",
+        "pages/customer/profit/profit",
+        "pages/customer/order/order",
+        "pages/customer/pay/pay",
+        "pages/store/order/order",
+        "pages/store/order/user",
+        "pages/store/order/detail",
+        "pages/store/order/account",
+        "pages/customer/account/account"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#FF9935",
+        "navigationBarTitleText": "泉州商圈联盟",
+        "navigationBarTextStyle": "white",
+        "borderStyle": "black",
+        "enablePullDownRefresh": true
+    },
+    "tabBar": {
+        "color": "#b7b7b7",
+        "selectedColor": "#FF9935",
+        "backgroundColor": "#fff",
+        "list": [
+            {
+                "pagePath": "pages/article/list",
+                "iconPath": "/image/img/brand.png",
+                "selectedIconPath": "/image/img/brand1.png",
+                "text": "品牌"
+            },
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "/image/img/home.png",
+                "selectedIconPath": "/image/img/home1.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/class/class",
+                "iconPath": "/image/img/class.png",
+                "selectedIconPath": "/image/img/class1.png",
+                "text": "分类"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "iconPath": "/image/img/my.png",
+                "selectedIconPath": "/image/img/my1.png",
+                "text": "我的"
+            }
+        ]
+    }
+}

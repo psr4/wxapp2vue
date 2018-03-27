@@ -1,0 +1,51 @@
+<!--pages/info/info.wxml-->
+<import src="/template/common.wxml"/>
+<!-- 
+<view class="tab">
+<view class="item {{status == 0?'active':''}} clearbor" data-status="0" bindtap="changetab">我的资料</view>
+<view class="item {{status == 1?'active':''}}" data-status="1" bindtap="changetab">修改密码</view>
+</view> -->
+
+
+<view class="box" wx:if="{{status == 0 }}">
+  <view class="list">
+    <view class="title">昵称:</view>
+    <view class="content">{{nickName}}</view>
+  </view>
+  <view class="list">
+    <view class="title">头像:</view>
+    <view class="content"><image src="{{avatarUrl}}"></image></view>
+  </view>
+  <view class="list">
+    <view class="title">帐号:</view>
+    <view class="content">{{userInfo.username}}</view>
+  </view>
+  <view class="list">
+    <view class="title">等级:</view>
+    <view class="content">{{userInfo.level}}</view>
+  </view>
+  <view class="list">
+    <view class="title">地区:</view>
+    <view class="content">{{userInfo.province}} {{userInfo.city}}</view>
+  </view>
+</view>
+
+<view wx:if="{{status == 1}}" class="account-wrapper">
+  <!--view class="tip">原密码:</view>
+    <input type="text" placeholder="请填写您的原密码" data-name="oldpassword" bindinput="bindKeyInput" password/>
+  <view class="tip">新密码:</view>
+    <input type="text" placeholder="输入新密码，不修改请留空" data-name="newpassword" bindinput="bindKeyInput" password/-->
+  <view class="tip">原支付密码:</view>
+    <input type="text" placeholder="请输入您的原支付密码，首次更改留空" data-name="oldpaypwd" bindinput="bindKeyInput" password/>
+  <view class="tip">新支付密码:</view>
+    <input type="text" placeholder="输入支付新密码" data-name="newpaypwd" bindinput="bindKeyInput" password/>
+    <view class="btngroup">
+     <button bindtap="changepwd">修改</button>
+    </view>
+
+</view>
+
+<service/>
+ <!-- <template is="contact" data="{{contaction}}"></template>  -->
+
+<template is="tabbar" data="{{showtabbar}}"></template>

@@ -1,0 +1,69 @@
+<view class="picture">
+    <swiper autoplay="true" >
+        <swiper-item wx:for="{{img}}" wx:key="banner">
+            <image src="{{item.url}}" mode="aspectFit" data-src="{{item.url}}" bindtap="previewimage"></image>
+        </swiper-item>
+    </swiper>
+</view>
+
+<view class="information">
+    <view class="title">{{item.title}}</view>
+    <view class="jiage">
+
+        <view class="yuanjia">地址：{{item.sheng}}{{item.shi}}{{item.qu}}{{item.detail}}</view>
+        <view class="yuanjia">距离：{{item.distance}}</view>
+     </view> 
+</view>
+
+
+<view class="info">
+  <import src="../../wxParse/wxParse.wxml"/> 
+  <template wx:if="{{show}}" is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+
+<view style="height:60px;"></view>
+
+
+<view class="cartbar">
+    <ul>
+        <li class="tubiao">
+            <navigator url="/pages/index/index" open-type="switchTab">
+                <view class="icon">
+                    <image src="/image/img/home.png"></image>
+                </view>
+                <view class="title">首页</view>
+            </navigator>
+        </li>
+        <li class="tubiao" catchtap="call" data-tel="{{item.tel}}">
+         
+                <view class="icon" >
+                    <image src="/image/img/tel.png"></image>
+                </view>
+                <view class="title">一键拨打</view>
+        
+        </li>
+           <li class="tubiao" catchtap="sall">
+  
+                <view class="icon">
+                    <image src="/image/img/sall.png"></image>
+                </view>
+                <view class="title">售卖</view>
+       
+        </li>
+
+         <li class="tubiao" >
+            <button open-type='contact'>
+                  <view class="icon" >
+                      <image src="/image/img/kefu.png"></image>
+                  </view>           
+                  <view class="title">联系客服</view>
+              </button>
+        </li>
+         <!-- <view class="contact {{sall?'c-show':''}} sall " catchtap="sall">
+          <image src='{{item.menu_img}}' mode='aspectFit'></image>
+     
+        </view> -->
+
+    </ul>
+</view>
+

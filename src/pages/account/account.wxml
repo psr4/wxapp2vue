@@ -1,0 +1,35 @@
+<!--pages/account/account.wxml-->
+<import src="/template/common.wxml" />
+
+<view class="account" >
+  <image src="/image/img/balance.png"></image>
+  <view class="yue">商家钱包</view>
+  <view class="balance">{{user.user_account}}</view>
+</view>
+
+<!-- <view class="service">
+  <view class="info">
+    <navigator url="/pages/recharge/recharge">
+    <view class="chongzhi"><i class="iconfont icon-chongzhi"></i>充值</view>
+    </navigator>
+  </view>
+  <view class="info">
+   <navigator url="/pages/withdraw/withdraw">  
+    <view class="tixian"><i class="iconfont icon-tixian"></i>提现</view>
+    </navigator>
+  </view>
+</view> -->
+
+<view class="btnlist">
+  <navigator url="/pages/accountdetail/accountdetail" class="list">
+    <view class="mingxi"><i class="iconfont icon-jiaoyijilu"></i>账单明细</view>
+    <i class="iconfont icon-return1"></i>
+  </navigator>
+</view>
+<view class="zuixinjilu">
+
+</view>
+
+<service _left="{{_left}}" _top="{{_top}}"/>
+<!-- <template is="contact" data='{{contaction}}'></template>  -->
+<template is="tabbar"></template>

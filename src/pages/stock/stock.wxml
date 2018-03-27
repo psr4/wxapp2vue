@@ -1,0 +1,134 @@
+<view class="banner">
+    <!-- <view class='xiaoxi'>
+    <image src='/image/img/message.png'></image>
+    <view class='num'>1</view>
+  </view> -->
+    <swiper autoplay="true">
+        <swiper-item wx:key="*this" wx:for="{{arc}}">
+            <view>
+				<url url="/pages/article/article?id={{item.id}}&kfShow=1">
+                	<image src="{{item.img}}"> </image>
+				</url>
+            </view>
+        </swiper-item>
+    </swiper>
+</view>
+
+<swiper autoplay='true' duration='1000' vertical='true' circular='true' class='swiGS'>
+    <swiper-item>
+        <view class='stockBox'>
+            <view class='sto_item'>
+                <image src='/image/img/deep.png'></image>
+                <view class="sto_day">
+                    <view wx:if="{{stock['isToday']}}"> 今</view>
+                    <view wx:else>昨</view>
+                </view>
+                <view class='sto_bi'>
+                    <view>{{stock.nowpri}}</view>
+                    <view class='per'>{{stock.percent}}%</view>
+                </view>
+            </view>
+            <view class='sto_item'>
+                <image src='/image/img/bi.png'></image>
+                <view class="sto_day">
+                    <view>昨</view>
+                    <view>今</view>
+                </view>
+                <view class='sto_bi'>
+                    <view>{{stock.old_price}}</view>
+                    <view>{{stock.price}}</view>
+                </view>
+            </view>
+        </view>
+    </swiper-item>
+    <swiper-item>
+        <view class='news'>
+            <url url='/pages/article/article?cate_id={{ty_articles[0].cate_id}}'>
+                <image src="/image/img/cj.png"></image>
+                <view class='news_content'>
+                    {{ty_articles[0]["title"]}}
+                </view>
+            </url>
+        </view>
+    </swiper-item>
+</swiper>
+<view class='bor20'></view>
+
+<scroll-view scroll-x>
+    <view class="areaList">
+		<url class='li' bindclick='goto' data='{{ {url:"mining"} }}'>
+			挖矿操作
+		</url>
+        <url class='li' bindclick='goto' data='{{ {url:"quotes"} }}' >
+            行情
+        </url>
+        <url class='li' bindclick='goto' data='{{ {url:"rank"} }}' >
+            排行榜
+        </url>
+
+        <url class='li' bindclick='gotoArticle' data='{{ {id:ty_articles[1].cate_id} }}'>
+            新手指南
+        </url>
+        <url class='li' bindclick='gotoArticle' data='{{ {id:ty_articles[2].cate_id} }}'>
+            联系客服
+        </url>
+    </view>
+</scroll-view>
+
+<view class='bor20'></view>
+
+
+<view class='tyBi'>
+    <url url='bi'>
+        <view class='bi_title'>
+
+            <view class='title_boom'>我的天羽币</view>
+
+            <view class='more'>
+                <i class="iconfont icon-return1"></i>
+            </view>
+
+        </view>
+    </url>
+    <scroll-view scroll-x>
+        <view class='bi_list'>
+
+            <view class='bi_li' wx:for="{{list[1]}}" data-id='{{item.id}}'>
+                <url url='record?id={{item.id}}'>
+                    <image src='/image/img/bi.png'></image>
+                    <view class='bi'>{{item.id6}}</view>
+                </url>
+            </view>
+
+            <view class='bi_li' wx:if="{{!list[1]||list[1].length==0}}">
+                <view class='no'>暂无</view>
+            </view>
+
+        </view>
+    </scroll-view>
+</view>
+
+
+
+
+
+<view class='tyBi'>
+    <view class='bi_title'>
+        <view class='title_boom'>正在挖矿中</view>
+    </view>
+    <scroll-view scroll-x>
+        <view class='bi_list'>
+            <url url='record?id={{item.id}}' wx:for="{{list[0]}}">
+                <view class='bi_li'>
+                    <image src='/image/img/wkbi.png'>
+                        <view class='num'>{{item.num}}</view>
+                    </image>
+                    <view class='bi'>{{item.id6}}</view>
+                </view>
+            </url>
+            <view class='bi_li' wx:if="{{!list[0]||list[0].length==0}}">
+                <view class='no'>暂无</view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

@@ -1,0 +1,43 @@
+<view class='box'>
+  <view class="switch">
+      <view class="tab {{tab=='0'?'active':''}}" data-tab="0" catchtap="changetab">持币榜</view>
+      <view class="tab {{tab=='1'?'active':''}}" data-tab="1" catchtap="changetab">创币榜</view>
+  </view>
+</view>
+
+<view class='items' wx:if="{{tab == '0'}}">
+  <view class='item' wx:for="{{ranks}}">
+    <view class='sort' wx:if="{{index<3}}"><image src='/image/img/hg{{index+1}}.png'></image></view>
+       <view class='sort' wx:if="{{index>=3}}">{{index+1}}</view>
+    <image src='{{item.user.headimgurl}}'></image>
+    <view class='info'>
+      <view class='name'>{{item.user.nickname}}</view>
+      <view class='account'>账号：{{item.user.username}}</view>
+      <view class='num'>
+        <image src='/image/img/bi.png'></image>
+        <text class='rank_num'>{{item.num}}</text>
+      </view>
+    </view>
+  </view>
+ 
+</view>
+
+
+<view class='items' wx:if="{{tab == '1'}}">
+  <view class='item' wx:for="{{birth_rank}}">
+  <view class='sort' wx:if="{{index<3}}"><image src='/image/img/hg{{index+1}}.png'></image></view>
+       <view class='sort' wx:if="{{index>=3}}">{{index+1}}</view>
+    <image src='{{item.user.headimgurl}}'></image>
+    <view class='info'>
+      <view class='name'>{{item.user.nickname}}</view>
+      <view class='account'>账号：{{item.user.username}}</view>
+      <view class='num'>
+          <image src='/image/img/bi.png'></image>
+          <text class='rank_num'>{{item.num}}</text>
+        <!-- <image src='/image/img/time.png'></image><text>{{item.time}}</text> -->
+      </view>
+    </view>
+  </view>
+  
+
+</view>

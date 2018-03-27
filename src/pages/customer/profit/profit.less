@@ -1,0 +1,26 @@
+@import '../../../common.less';
+.tab {
+    padding: 10px 0;
+    ul {
+        display: flex;
+        width: 460rpx;
+        margin: 0 auto;
+        li {
+            line-height: 24px;
+            text-align: center;
+            border: solid 1px @color;
+            color: @color;
+            flex: 1;
+            &.active {
+                background: @color;
+                color: white;
+            }
+            &:first-child {
+                border-radius: 32px 0 0 32px;
+            }
+            &:last-child {
+                border-radius: 0 32px 32px 0;
+            }
+        }
+    }
+}

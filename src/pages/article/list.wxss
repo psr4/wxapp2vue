@@ -1,0 +1,28 @@
+.list{
+    padding:10px;
+}
+page{
+    background: #FAF7F5;
+}
+.list .item {
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0 0 4px #F2F0EA;
+    margin-bottom: 15px;
+}
+.list .item .pic image{
+    width:100%;
+    border-radius: 3px 3px 0 0 ;
+}
+.list .item .content .title{
+    color:#333;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: norap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-bottom: 8px;
+}
+.list .item .content {
+    padding: 10px 10px;
+}

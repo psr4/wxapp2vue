@@ -1,0 +1,76 @@
+@import '../../../common.less';
+page {
+    background: #eee;
+}
+
+.header {
+    background: @color;
+    height: 100px;
+    text-align: center;
+    image {
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        background: @color;
+        margin: 10px auto 4px;
+    }
+    .tip {
+        color: white;
+    }
+}
+
+.form {
+    .row {
+        display: flex;
+        margin-bottom: 8px;
+        background: white;
+        .label {
+            flex: 0 0 80px;
+            line-height: 32px;
+            text-align: center;
+            margin: 4px 0;
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                right: 4px;
+                top: 4px;
+                height: 24px;
+                border-right: solid 1px #ccc;
+            }
+        }
+        .content {
+            flex: 1;
+            .input {
+                height: 32px;
+                font-size: 10px;
+                line-height: 32px;
+                padding: 4px 0 0;
+                input ,.text{
+                    width: 100%;
+                    height: 32px;
+
+                    line-height: 32px;
+                    font-size: 10px;
+                    padding: 0 4px;
+                    box-sizing: border-box;
+                }
+            }
+            .tip {
+                color: #999;
+                margin-bottom: 4px;
+            }
+        }
+        .btn{
+            flex: 1;
+            button{
+                width: 80%;
+                height: 32px;
+                line-height: 32px;
+                color:white;
+                background: @color;
+                margin: 10px auto;
+            }
+        }
+    }
+}

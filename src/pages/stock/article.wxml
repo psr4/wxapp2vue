@@ -1,0 +1,62 @@
+@import '../../wxParse/wxParse';
+.content .title {
+    padding: 20px 5%;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.content image {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.content .desc {
+    font-size: 12px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin: 10px 0;
+}
+
+.content {
+    width: 100%;
+}
+
+.pwd-wrapper {
+    margin: 100px 30px;
+    border-radius: 5px;
+    border: solid 1px #ccc;
+    box-shadow: 0 2px 4px #ccc;
+}
+
+.pwd-wrapper .title {
+    background: #ef2f72;
+    line-height: 42px;
+    padding: 0 10px;
+    border-radius: 5px 5px 0 0;
+    color: white;
+}
+
+.pwd-wrapper .input {
+    background: white;
+    padding-bottom: 10px;
+    border-radius: 0 0 5px 5px;
+}
+
+.pwd-wrapper .input input {
+    margin: 20px 10px;
+    border: solid 1px #ccc;
+    border-radius: 3px;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.pwd-wrapper button {
+    background: #ef2f72;
+    color: white;
+    height: 32px;
+    line-height: 32px;
+    margin: 10px;
+}

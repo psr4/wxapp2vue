@@ -1,0 +1,81 @@
+ .touming {
+  height: 24%;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+ .coupons {
+	height: 76%; 
+	background: #f8f7f7;
+	padding: 20rpx 0;
+}
+
+ .coupons .title {
+  	text-align: center;
+}
+.coupons .coupon.active{
+	background: #FD5992;
+}
+ .coupons .coupon {
+	width: 90%;
+	margin: 30rpx auto;
+	background: #bbb;
+	border-radius: 0 5px 5px 0 ;
+	display: flex;
+	padding: 20rpx 20rpx;
+	align-items: center;
+}
+ .coupons .coupon  .info{
+	flex: 1;
+	padding-left: 20rpx;
+	color: #fff;
+	position: relative;
+	border-right: dashed 1px #fff;
+}
+ .coupons .coupon  .info::before{
+	position: absolute;
+	display: block;
+	height:16px;
+	width:16px;
+	border-radius: 16px;
+	top:-18px;
+	right: -8px;
+	background: #F8F7F7;
+	content: "";
+ }
+.coupons .coupon  .info::after{
+	position: absolute;
+	display: block;
+	height:16px;
+	width:16px;
+	border-radius: 16px;
+	bottom:-18px;
+	right:-8px;
+	background:  #F8F7F7;
+	content: "";
+}
+ .coupons .coupon  .info .value{
+  line-height: 90rpx;
+  font-size: 54rpx;
+  
+}
+ .coupons .coupon  .info .value text,.manjian,.time{
+  font-size: 20rpx;
+  line-height: 30rpx;
+}
+ .coupons .coupon .lingqu{
+  flex: 0 0 25%;
+  text-align: center;
+  color: #fff;
+}
+ .coupons .complete{
+  width: 100%;
+  height: 120rpx;
+  background: -webkit-linear-gradient(left, #ef582f, #efa02f);
+  bottom: 0;
+  left:0;
+  z-index: 100;
+  text-align: center;
+  font-size: 28rpx;
+  line-height: 80rpx;
+  color: #fff;
+}

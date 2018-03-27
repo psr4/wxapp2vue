@@ -1,0 +1,6 @@
+<form bindsubmit='tap_event' report-submit="true">
+    <button form-type='submit' class="button_none {{block=='1'?'block':''}}" hover-class="none">
+        <slot>
+        </slot>
+    </button>
+</form>

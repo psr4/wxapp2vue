@@ -1,0 +1,1 @@
+export const SET_TABBAT_STATUS = 'SET_TABBAT_STATUS'

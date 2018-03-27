@@ -1,0 +1,19 @@
+<view class="showcoupon ">
+  <view class="touming" bindtap="addcoupon"></view>
+  <view class="coupons" >
+    <view class="coupon {{item.hasget==1?'':'active'}}" wx:for="{{discount}}" wx:key="*this">
+      <view class="info">
+          <view class="value"><text>￥</text>{{item.price}}</view>
+          <view class="manjian">
+          {{item.type == 1?'现金券':'订单满'+item.usable+'元可使用'}}
+          </view>
+          <view class="time">{{item.sykssj}}-{{item.syjssj}}</view>
+      </view>
+      <view class="lingqu" bindtap="{{item.hasget==1?'':'receive'}}" data-id="{{item.id}}">
+	  {{item.hasget==1?'领取成功':'立即领取'}}
+	  </view>
+    </view>
+  </view>
+</view>
+
+ <template is="contact" data="{{contaction}}"></template> 

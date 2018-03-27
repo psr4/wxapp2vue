@@ -1,0 +1,73 @@
+.quotesBox .title{
+    font-size: 15px;
+    color: #333;
+    background: #f0f0f0;
+    line-height: 36px;
+    padding: 0 15px;
+}
+.quotesBox .list{
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+.quotesBox .list .li{
+  background: #f0f0f0;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 3px;
+}
+.li .tit{
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+.li .day{
+  font-size: 13px;
+  padding-bottom: 3px;
+  color: #FF9935;
+  text-align: left;
+}
+.li .per{
+   color: #FF9935;
+   padding-left: 0px;
+}
+.li .day text{
+  display: inline-block;
+  width: 18px;
+  color: #666;
+}
+
+.item{
+  background: #f0f0f0;
+  line-height: 30px;
+  padding:0 15px;
+  font-size: 13px;
+  margin-bottom: 1px;
+}
+.item text{
+  padding-left: 5px;
+}
+.item .iconfont{
+  color: #FF9935;
+  font-size: 14px;
+}
+.item .icon-more{
+  float: right;
+  font-size: 16px;
+}
+.tap{
+  padding: 10px 15px;
+  justify-content: space-between;
+}
+.tap image{
+  width: 15px;
+   height: 15px; 
+}
+.digital{
+  color: red;
+}
+.show{
+  display: flex;
+}
+.hidden{
+  display: none;
+}

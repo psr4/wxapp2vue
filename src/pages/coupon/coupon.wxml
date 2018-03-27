@@ -1,0 +1,29 @@
+<!--pages/coupon/coupon.wxml-->
+<import src="/template/common.wxml" />
+
+<view class="tab" wx:if="{{method != 'choose'}}">
+  <view class="item {{status == 1?'active':''}}" data-status="1" bindtap="changetab">未使用</view>
+  <view class="item {{status == 2?'active':''}}" data-status="2" bindtap="changetab">已使用/已过期</view>
+</view>
+
+<view class="box">
+  <view class="coupon {{((item.canuse == 1 || method != 'choose') && status == 1)?'active':''}}" wx:for="{{discount}}" wx:key="*this" 
+   wx:if="{{status == item.used}}" 
+    catchtap="{{method}}" data-index="{{index}}"
+  >
+    <view class="left">
+      <view class="name">{{item.type == 1?'现金券':'满减券'}}</view>
+      <view class="value"><text>￥</text>{{item.price}}</view>
+    </view>
+    <view class="right">
+      <view class="manjian">{{item.type == 1?'立减 ￥'+item.price:'满'+item.usable+'减'+item.price}}</view>
+      <view class="tongyong">{{item.name}}</view>
+      <view class="time">{{item.stime}} - {{item.etime}}</view>
+    </view>
+  </view>
+</view>
+
+
+ <template is="contact" data="{{contaction}}"></template> 
+
+<template  wx:if="{{method != 'choose'}}" is="tabbar"></template>

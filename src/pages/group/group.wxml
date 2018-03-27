@@ -1,0 +1,60 @@
+<import src="/template/common.wxml"/>
+
+
+
+<view class="box">
+ 
+    <view class="title">
+      <view class="left"><i class="iconfont icon-my"></i>我的推荐</view>
+      <view class="right"><i class="iconfont icon-down"></i></view>
+    </view>
+    <navigator url="/pages/grouplist/grouplist" >
+  <view class="clearbor item">
+ 
+    <view class="left"><i class="iconfont icon-friend"></i>我的团队</view>
+    <view class="right"><i class="iconfont icon-return1"></i>
+    <!-- <text class="round">{{group.u1.num}}人</text> -->
+    </view>
+   
+  </view>
+   </navigator>
+  <!-- <view class=" item">
+    <view class="left"><i class="iconfont icon-group"></i>我的团队</view>
+    <view class="right">
+    <text class="round">{{group.u2.num}}人</text>
+    </view>
+  </view> -->
+</view>
+
+<view class='bor-gray'></view>
+
+<view class="box" wx:if="{{group.is_show==1}}">
+
+   <view class="title">
+      <view class="left"><i class="iconfont icon-home"></i>商家团</view>
+      <view class="right"><i class="iconfont icon-down"></i></view>
+    </view>
+  <navigator url="/pages/detaillist/detaillist"  >
+    <view class="item">
+    
+        <view class="left"><i class="iconfont icon-pay"></i>商家排位</view>
+        <view class="right">
+        <!-- {{group.detail_no}}  -->
+        <i class="iconfont icon-return1"></i>
+        <!-- <text class="round">位</text> -->
+        </view>
+    </view>
+  </navigator>
+  <view class="item ">
+    <view class="left"><i class="iconfont icon-evaluate"></i>奖金</view>
+    <view class="right">{{group.jinner}}
+    <text class="round">元</text>
+    </view>
+  </view>
+</view>
+
+
+<service _left="{{_left}}" _top="{{_top}}"/>
+ <!-- <template is="contact" data='{{contaction}}'></template>  -->
+
+<template is="tabbar" data="{{showtabbar}}"></template>

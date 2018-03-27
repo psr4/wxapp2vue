@@ -1,0 +1,12 @@
+<import src="/template/common.wxml"/>
+<!--template is="titlebar" data="{{...titlebar}}"></template-->
+
+
+<view class="conetent">
+<image src="{{url}}" bindtap="view" mode="widthFix"></image>
+
+</view>
+
+<!-- <template is="contact" data='{{contaction}}'></template>  -->
+ <service/>
+<template is="tabbar" data="{{showtabbar}}"></template>

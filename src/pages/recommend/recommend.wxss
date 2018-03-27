@@ -1,0 +1,69 @@
+/* pages/recommend/recommend.wxss */
+
+.goodsitem {
+  background: white;
+}
+.goodsitem .iconfont{
+  font-size: 32rpx;
+  color: #ef2f72;
+}
+.goodsitem .title {
+  padding: 20rpx 40rpx;
+  box-shadow: 0px 1rpx 8rpx #bbb;
+}
+
+.items {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+}
+
+.items .item {
+  flex: 0 0 100%;
+  display: flex;
+  border-bottom: solid 1rpx #f0f0f0;
+}
+
+.items .item .pic {
+  flex: 0 0 160rpx;
+}
+
+.items .item .pic image {
+  width: 150rpx;
+  margin: 10rpx;
+  height: 150rpx;
+}
+
+.items .item .desc {
+  flex: 1;
+  padding: 10rpx;
+}
+
+.items .item .desc .name {
+  font-size: 26rpx;
+  /* margin: 8rpx 0; */
+  line-height: 54rpx;
+}
+.items .item .desc .info{
+  display: flex;
+  margin-top:10rpx;
+  align-items: flex-end;
+}
+.items .item .class {
+  font-size: 26rpx;
+  padding: 10rpx;
+  line-height: 54rpx;
+  color: #bbb;
+  flex: 0 0 10%;
+}
+
+.items .item .desc .price {
+  font-size: 28rpx;
+  color: #ef2f72;
+  margin-right: 20rpx;
+  line-height: 56rpx;
+}
+.items .item .desc .amount {
+   font-size: 22rpx; 
+  color: #bbb;
+}

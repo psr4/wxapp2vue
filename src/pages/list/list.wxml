@@ -1,0 +1,49 @@
+<!--pages/list/list.wxml-->
+<import src="/template/common.wxml" />
+
+<!--view class="filterbar">
+  <view class="zonghe {{order == '1'?'active':''}}" data-id="1" catchtap="sortitem">综合排序</view>
+  <view class="xiaoliang {{order == '3'?'active':''}}" data-id="3" catchtap="sortitem">销量</view>
+  <view class="zuixin {{order == '2'?'active':''}}" data-id="2" catchtap="sortitem">最新</view>
+  <view class="jiage {{order == '4'?'active':''}}" data-id="4" catchtap="sortitem">价格</view>
+</view-->
+
+<!-- <view class="list">
+  <view class="item" wx:for="{{list}}" wx:key="*this">
+    <navigator url="/pages/detail/detail?id={{item.id}}">
+      <view class="itemimg">
+        <image src="{{item.img}}" mode="widthFix"></image>
+      </view>
+      <!--view class="wenzi">
+        <view class="title">{{item.title}}</view>
+        <view class="price">￥{{item.price}}</view>
+        <view class="xiaoshou">已售{{item.buy_num}}件</view>
+      </view>
+    </navigator>
+  </view>
+</view> -->
+
+<!-- 分类产品列表 -->
+<view class="book-ul">
+  <view class='book-li' wx:for="{{items}}" data-id="{{item.id}}" bindtap='bindGotoDetail' data-distance="{{item.distance}}">
+
+    <image src='{{item.img}}'></image>
+    <view class='info'>
+      <view class='tit'>{{item.title}}</view>
+      <view class='desc'>{{item.cate_name}}</view>
+      <view class='other'>
+        <view>地址:{{item.sheng}}{{item.shi}}{{item.qu}}{{item.detail}}</view>
+        <view>{{item.distance}}</view>
+      </view>
+
+    </view>
+
+  </view>
+
+</view>
+
+ <!-- <template is="contact" data='{{contaction}}'></template>  -->
+
+<view style="height:60px;"></view>
+<template is="tabbar"></template>
+<service _left="{{_left}}" _top="{{_top}}"/>

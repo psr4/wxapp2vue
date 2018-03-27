@@ -1,0 +1,18 @@
+<table>
+    <thead>
+        <tr>
+            <th>时间</th>
+            <th>用户</th>
+            <th>消费</th>
+            <th>返利</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr wx:for="{{list}}" wx:key="index">
+            <td>{{item.add_time}}</td>
+            <td>{{item.username}}</td>
+            <td>{{item.pay}}</td>
+            <td>{{item.bonus}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,45 @@
+<import src="/template/common.wxml" />
+
+<view class="tap">
+  <view class="item {{status == 0?'active':''}}" data-status="0" bindtap="changetap">全部</view>
+  <view class="item {{status == 1?'active':''}}" data-status="1" bindtap="changetap">待付款</view>
+  <view class="item {{status == 2?'active':''}}" data-status="2" bindtap="changetap">待发货</view>
+  <view class="item {{status == 3?'active':''}}" data-status="3" bindtap="changetap">待收货</view>
+  <view class="item {{status == 4?'active':''}}" data-status="4" bindtap="changetap">已完成</view>
+</view>
+
+<view class="details {{(status == item.status || status == 0)?'show':'hide'}}" wx:for="{{detail}}" wx:key="detail" >
+  <view class="detail">
+    <view class="id">订单号：{{item.orderId}}</view>
+    <view class="status">{{item.status_T}}</view>
+  </view>
+  <view class="items">
+    <view class="item" wx:for="{{item.items}}" wx:key="item" wx:for-item="list">
+      <view class="pic">
+        <image src="{{list.img}}"></image>
+      </view>
+      <view class="desc">
+        <view class="title">{{list.title}}</view>
+        <view class="xiangqing">{{list.item_attr}} </view>
+      </view>
+      <view class="info">
+        <view class="price">￥{{list.price}} </view>
+        <view class="amount"> {{list.quantity}}</view>
+      </view>
+    </view>
+    <view class="btns">
+      <view class="time">日期：{{item.add_time}}</view>
+      <button bindtap="controller" data-status="{{item.status}}" data-id="{{item.orderId}}" data-rid="{{item.id}}">操作</button>
+    </view>
+  </view>
+</view>
+
+ <template is="contact" data='{{contaction}}'></template> 
+
+<view style="height:60px"></view>
+<template is="tabbar"></template>
+
+
+
+
+

@@ -1,0 +1,31 @@
+<!--pages/dopay/dopay.wxml-->
+<import src="/template/common.wxml"/>
+
+<view class="box">
+ <view class="line">您的订单已成功生成，选择您想用的支付方式进行支付</view>
+ <view class="line">订单编号：<text class="red">{{order.orderId}}</text></view>
+ <view class="line">订单总价：<text class="red">¥{{order.order_sumPrice}}</text></view>
+ <view class="line">会员余额：<text class="red">{{user.user_account}}</text></view>
+</view>
+
+<view class="select">
+ <picker range='{{ ["余额支付","微信支付"] }}' bindchange="bindChange1">
+ <view class="items">付款方式:{{model==='0'?'余额支付':'微信支付'}}</view>
+ </picker>
+ <!--picker-view class="select" indicator-style="height:30px;" bindchange="bindChange1">
+    <picker-view-column>
+      <view class="items">余额支付</view>
+      <view class="items">微信支付</view>
+    </picker-view-column>
+  </picker-view-->  
+  <button class="pay" bindtap="pay">确认支付</button>
+</view>
+<view class="box">
+
+  <view class="tips">您可以在<navigator url="/pages/detail/detail" class="red"> 我的订单 </navigator>中查看或取消您的订单。</view>
+  <view class="tips">如果您现在不方便支付，可以随后到<navigator url="/pages/detail/detail" class="red"> 我的订单 </navigator>完成支付，我们会在48小时内为您保留未支付的订单。</view>
+</view>
+
+ <template is="contact" data='{{contaction}}'></template> 
+
+<template is="tabbar" data="{{showtabbar}}"></template>

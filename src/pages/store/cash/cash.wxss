@@ -1,0 +1,131 @@
+table {
+  display: table;
+  width: 750rpx;
+}
+table tr {
+  display: table-row;
+}
+table tr th {
+  display: table-cell;
+}
+table tr td {
+  font-size: 10px;
+  display: table-cell;
+  vertical-align: middle;
+}
+table thead {
+  display: table-header-group;
+  text-align: center;
+  background: #FF9935;
+  color: white;
+  font-size: 12px;
+  line-height: 32px;
+}
+table tbody {
+  display: table-row-group;
+  text-align: center;
+}
+table tbody td {
+  height: 32px;
+  line-height: 32px;
+}
+table tbody tr:nth-child(odd) {
+  background: rgba(125, 125, 125, 0.1);
+}
+table tbody tr:nth-child(even) {
+  background: transparent;
+}
+button {
+  display: block;
+  width: 60px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  font-size: 10px;
+}
+page {
+  background: #eee;
+}
+.header {
+  background: #FF9935;
+  height: 100px;
+  text-align: center;
+}
+.header image {
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  background: #FF9935;
+  margin: 10px auto 4px;
+}
+.header .tip {
+  color: white;
+}
+.form .row {
+  display: flex;
+  background: white;
+}
+.form .row image {
+  width: 20px;
+  height: 20px;
+  margin: auto 5px auto 10px;
+}
+.form .row .label {
+  flex: 0 0 70px;
+  line-height: 32px;
+  margin: 4px 0;
+  position: relative;
+}
+.form .row .label:after {
+  content: "";
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  height: 24px;
+  border-right: solid 1px #ccc;
+}
+.form .row .content {
+  flex: 1;
+}
+.form .row .content .input {
+  height: 32px;
+  font-size: 10px;
+  line-height: 32px;
+  padding: 4px 0 0;
+}
+.form .row .content .input input,
+.form .row .content .input .text {
+  width: 100%;
+  height: 32px;
+  line-height: 32px;
+  font-size: 10px;
+  padding: 0 4px;
+  box-sizing: border-box;
+}
+.form .row .tip {
+  flex: 0 0 80px;
+  text-align: center;
+}
+.form .row .tip button {
+  height: 24px;
+  line-height: 24px;
+  margin: 7px auto;
+}
+.form .row .btn {
+  flex: 1;
+}
+.form .row .btn button {
+  width: 40%;
+  height: 32px;
+  line-height: 32px;
+  color: white;
+  background: #FF9935;
+  margin: 10px auto;
+}
+.note {
+  color: #FF9935;
+  background: #fff;
+  line-height: 32px;
+  font-size: 12px;
+  padding: 0 10px;
+}

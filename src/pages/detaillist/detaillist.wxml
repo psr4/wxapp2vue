@@ -1,0 +1,48 @@
+<import src="/template/common.wxml"/>
+
+<view class='title'>入驻人员</view>
+<view class='bor20'></view>
+<view class='ul'>
+  <view class='li' wx:for="{{users}}">
+    <image src='{{item.headimgurl}}'></image>
+    <view class='name'>{{item.nickname}}</view>
+      <view class='add_time'>{{item.tuan_add_time}}</view>
+  </view>
+ 
+</view>
+<!-- <view class="tabbtn">
+  <view class="btn1 {{tabid==1?'active':''}}" bindtap="changtab" data-id="1">已完成订单</view>
+  <view class="btn2 {{tabid==2?'active':''}}" bindtap="changtab" data-id="2">未完成订单</view>
+</view>
+
+
+<view class="userlist" style="{{tabid==2?'display:none;':''}}">
+  <view class="list" wx:for="{{u1}}" wx:key="u1">
+      <view class="userinfo">
+        <view class="nickname" style="font-size:10px;">订单号:{{item.orderSn}}</view>
+      </view>
+      <view class="userinfo">
+        <view class="nickname"  style="color:red;">{{item.intro}}</view>
+      </view>
+      <view class="userinfo">
+        <view class="nickname"   style="color:red;">分成金额:{{item.order_fcprice}}</view>
+        <view class="nickname"  style="font-size:10px;">{{item.addtime}}</view>
+      </view>
+  </view>
+</view>
+<view class="userlist" style="{{tabid==1?'display:none;':''}}">
+  <view class="list" wx:for="{{u2}}" wx:key="u2">
+      <view class="userinfo">
+        <view class="nickname">订单号:{{item.orderSn}}</view>
+      </view>
+      <view class="userinfo">
+        <view class="nickname" style="color:red;">{{item.intro}}</view>
+      </view>
+      <view class="userinfo">
+        <view class="nickname" style="color:red;">分成金额:{{item.order_fcprice}}</view>
+        <view class="nickname">{{item.addtime}}</view>
+      </view>
+  </view>
+</view> -->
+<service />
+ <!-- <template is="contact" data='{{contaction}}'></template>  -->

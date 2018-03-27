@@ -1,0 +1,97 @@
+/* pages/coupon/coupon.wxss */
+
+page {
+    background: #f8f7f7;
+}
+
+.tab {
+    background: white;
+    display: flex;
+    box-shadow: 0 0 4px #ddd;
+}
+
+.tab .item {
+    flex: 1;
+    text-align: center;
+    line-height: 40px;
+    border-left: solid 1px #ddd;
+}
+
+.tab .active {
+    color: #ef2f72;
+}
+
+.coupon.active {
+    background: white;
+    color: #ef2f72;
+    border-left: solid 3px #ef2f72;
+}
+
+.coupon {
+    width: 90%;
+    margin: 30rpx auto;
+    padding: 20rpx 20rpx 20rpx 0;
+    display: flex;
+    background: #eee;
+    color: #666;
+    border-radius: 3px 0 0 3px;
+    border-left: solid 3px #666;
+}
+
+.coupon .left::after {
+    content: "";
+    position: absolute;
+    right: -6px;
+    bottom: -15px;
+    height: 12px;
+    width: 12px;
+    border-radius: 12px;
+    background: #f8f7f7;
+}
+
+.coupon .left::before {
+    content: "";
+    position: absolute;
+    right: -6px;
+    top: -15px;
+    height: 12px;
+    width: 12px;
+    border-radius: 12px;
+    background: #f8f7f7;
+}
+
+.coupon .left {
+    position: relative;
+    border-right: dotted 1px #ccc;
+    flex: 0 0 30%;
+}
+
+.coupon .left .name {
+    padding-left: 20rpx;
+}
+
+.coupon .left .name, .coupon .left .value text {
+    font-size: 20rpx;
+}
+
+.coupon .left .value {
+    text-align: center;
+    font-size: 56rpx;
+    line-height: 90rpx;
+}
+
+.coupon .right {
+    flex: 1;
+    padding: 0 40rpx;
+    line-height: 40rpx;
+}
+
+.coupon .right .tongyong {
+    color: #000;
+    font-size: 20rpx;
+}
+
+.coupon .right .time {
+    color: #bbb;
+    font-size: 20rpx;
+}
