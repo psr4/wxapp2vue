@@ -2,28 +2,31 @@ import Vue from 'vue'
 import Gstorage from 'good-storage'
 import ajax from './ajax'
 import router from '../../router/index.js'
-
 import swiper from '../components/swiper.vue'
 import swiperItem from '../components/swiperItem.vue'
 import navigator from '../components/navigator.vue'
 import page from '../components/page.vue'
-
+import scrollView from '../components/scrollView.vue'
+// import appData from '../../weapp/app.js'
+let appData = {
+  globalData: {}
+}
 const components = {
   swiper,
   swiperItem,
   navigator,
   url: navigator,
+  scrollView,
   page
 }
-
-const default_method = {
+let default_method = {
   setData(obj) {
     for (let i in obj) {
-      this[i] = obj[i]
-      this.data[i] = obj[i] 
+      this[ i ] = obj[ i ]
+      this.data[ i ] = obj[ i ]
     }
     this._refreshDom();
-	window.vm.$forceUpdate()
+    window.vm && window.vm.$forceUpdate()
   },
   _refreshDom() {
     clearTimeout(this.timer)
@@ -34,18 +37,21 @@ const default_method = {
     }, 500)
   }
 }
+
 export function Page(pageData) {
-  let methods = { ...default_method
+  let methods = {
+    ...default_method
   };
   for (const i in pageData) {
-    if (typeof pageData[i] == 'function') {
-      methods[i] = pageData[i]
+    if (typeof pageData[ i ] == 'function') {
+      methods[ i ] = pageData[ i ]
     }
   }
   pageData.data.options = {}
   return {
     data() {
-      return { ...pageData.data,
+      return {
+        ...pageData.data,
         ...{
           data: pageData.data
         }
@@ -73,42 +79,72 @@ export function Page(pageData) {
     components
   }
 }
-let app = {
-	globalData:{
-	}
-}
+
+let appInstance = appData
 
 export function getApp() {
-  observe(app)
-  return app
+  observe(appInstance)
+  return appInstance
+}
+
+export function App(pageData) {
+  return pageData
 }
 
 function observe(data) {
-    if (!data || typeof data !== 'object') {
-        return;
-    }
-    // 取出所有属性遍历
-    Object.keys(data).forEach(function(key) {
-        defineReactive(data, key, data[key]);
-    });
+  if (!data || typeof data !== 'object') {
+    return;
+  }
+  Object.keys(data).forEach(function (key) {
+    defineReactive(data, key, data[ key ]);
+  });
 };
+
 function defineReactive(data, key, val) {
-    observe(val); // 监听子属性
-    Object.defineProperty(data, key, {
-        enumerable: true, // 可枚举
-        configurable: true, // 不能再define
-        get: function() {
-            return val;
-        },
-        set: function(newVal) {
-            val = newVal;
-        }
-    });
+  observe(val);
+  Object.defineProperty(data, key, {
+    enumerable: true,
+    configurable: true,
+    get: function () {
+      return val;
+    },
+    set: function (newVal) {
+      val = newVal;
+    }
+  });
 }
 
 
 let confirm_show = true
 export const wx = {
+  canIUse (obj){
+	  return false;
+  },
+  getSystemInfoSync(obj) {
+    const app = document.querySelector("#app").getBoundingClientRect();
+    return {
+      windowWidth: app.width,
+      windowHeight: app.height
+    }
+  },
+  createCanvasContext(obj) {
+    const canvas = document.querySelector('canvas[canvas-id=mycanvas]')
+    const system = canvas.getBoundingClientRect();
+    canvas.width = system.width
+    canvas.height = system.height
+    const context = canvas.getContext('2d')
+    context.setFillStyle = function (color) {
+      this.fillStyle = color
+    };
+    context.draw = function () {
+
+    }
+    return context
+  },
+  showToast() {},
+  onAccelerometerChange(obj) {
+    console.log(obj)
+  },
   getLocation(obj) {
     const type = obj.type
     obj.success({
@@ -116,6 +152,9 @@ export const wx = {
       longitude: ''
     })
     // obj.fail({})
+  },
+  login(obj) {
+    obj.success && obj.success({ code: 1 })
   },
   showModal(obj) {
     const vm = window.vm
@@ -135,15 +174,15 @@ export const wx = {
       obj.success && obj.success(res)
     })
   },
-  showNavigationBarLoading(){},
+  showNavigationBarLoading() {},
   showLoading(obj) {
     const vm = window.vm
     const title = obj.title ? obj.title : '加载中...'
-    vm && vm.$loading(obj.title)
+    //vm && vm.$loading(obj.title)
   },
   hideLoading() {
     const vm = window.vm
-    vm && vm.$loading.close()
+    //vm && vm.$loading.close()
   },
   onPullUpLoad() {
     this.onReachBottom && this.onReachBottom()
@@ -191,10 +230,9 @@ export const wx = {
     this.navigateTo(obj)
   },
   getUserInfo(obj) {
-    console.log(obj)
+    obj.success && obj.success({ code: 1 })
   },
   request(obj) {
-    console.log(obj.url)
     if (obj.method == "POST") {
       ajax.post(obj.url, obj.data).then(obj.success)
     } else {

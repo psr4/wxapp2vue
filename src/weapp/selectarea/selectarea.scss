@@ -1,0 +1,65 @@
+@import '../../common/style/page.scss';
+.address_selector {
+  position:fixed;
+  top:0px;
+  bottom:0px;
+  width:100%;
+  background: rgba(0,0,0,0.5);
+  z-index:999;
+}
+.address_selector .main .btnbar{
+  background: #eee;
+  display: flex;
+  padding:8px;
+  font-size: 12px;
+}
+.address_selector .main .btnbar span{
+  height:20px;
+  line-height: 20px;
+  background: black;
+  color:white;
+  display: inline-block;
+  padding:0 20px;
+  border-radius: 3px;
+}
+.address_selector .main .btnbar .cancel{
+   flex:1;
+   text-align: left;
+}
+.address_selector .main .btnbar .confirm{
+  flex:1;
+  text-align: right;
+}
+.address_selector .main{
+  position: absolute;
+  bottom:0px;
+  height: 300px;
+  background: #E6EBF3;
+  width:100%;
+}
+.address_selector .main .btnbar{
+  background: #eee;
+}
+.address_selector .main .content{
+  display: flex;
+  text-align: center;
+  padding:30px 20px;
+  height:200px;
+}
+.address_selector .main .content scroll-view{
+  flex:1;
+  border-right: solid 0px #ccc;
+  padding:10px;
+}
+.address_selector .main .content scroll-view:last-child{
+  border-right: 0px;
+}
+.address_selector .main .content scroll-view .items{
+  line-height: 24px;
+  font-size: 12px;
+  color:#888;
+}
+.address_selector .main .content scroll-view .active{
+  background: rgba(255,255,255,0.4);
+  color:#333;
+}

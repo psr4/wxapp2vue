@@ -1,0 +1,1 @@
+        <button open-type="contact" send-message-title  =1 send-message-img	=1> <img src='/image/img/kf.png'  mode='aspectFit' :style="('left:'+(_left)+'px;top:'+(_top)+'px')" @touchmove.stop="move" :class="('kefu_img '+(move?'move':''))" @touchend.stop="touchend" @touchcancel.stop="touchend"   > </img>       </button>             

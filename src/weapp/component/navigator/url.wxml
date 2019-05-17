@@ -1,0 +1,1 @@
+<form report-submit="true" @submit="tap_event">     <button hover-class="none" :class="('button_none '+(block=='1'?'block':''))" type="submit">     <slot></slot>     </button> </form> 

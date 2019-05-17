@@ -1,0 +1,129 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.91",
+	"appid": "wxc1832e46908a1032",
+	"projectname": "%E6%B3%89%E5%B7%9E%E5%95%86%E5%9C%88%E8%81%94%E7%9B%9F",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": 0,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "test",
+					"pathName": "pages/detail/detail",
+					"query": "id=182",
+					"scene": 1044,
+					"shareInfo": {}
+				},
+				{
+					"id": 1,
+					"name": "1",
+					"pathName": "pages/site/site",
+					"query": "id=8355"
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "clss",
+					"pathName": "pages/class/class",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "detail",
+					"pathName": "pages/detail/detail",
+					"query": "id=217&distance=585m"
+				},
+				{
+					"id": -1,
+					"name": "detail",
+					"pathName": "pages/my/my",
+					"query": "id=217&distance=585m"
+				},
+				{
+					"id": -1,
+					"name": "my",
+					"pathName": "pages/my/my",
+					"query": "id=217&distance=585m"
+				},
+				{
+					"id": -1,
+					"name": "group",
+					"pathName": "pages/group/group",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "stock",
+					"pathName": "pages/stock/stock",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "quotes",
+					"pathName": "pages/stock/quotes",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "rank",
+					"pathName": "pages/stock/rank",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "rank",
+					"pathName": "pages/stock/rank",
+					"query": ""
+				},
+				{
+					"id": 12,
+					"name": "mining",
+					"pathName": "pages/stock/mining",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "control",
+					"pathName": "pages/stock/control",
+					"query": "scan=2400"
+				},
+				{
+					"id": -1,
+					"name": "天羽币",
+					"pathName": "pages/stock/mining",
+					"query": ""
+				}
+			]
+		}
+	}
+}
